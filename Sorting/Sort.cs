@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _10._Sorting
 {
-	internal class Sort
+	public class Sort
 	{
 		/******************************************************
 		 * 선형 정렬
@@ -52,14 +52,20 @@ namespace _10._Sorting
 		// 서로 인접한 데이터를 비교하여 정렬
 		public static void BubbleSort(IList<int> list)
 		{
+			int count = 0;
+			int lc = list.Count;
 			for (int i = 0; i < list.Count; i++)
 			{
-				for (int j = 1; j < list.Count; j++)
+				for (int j = 1; j < lc; j++)
 				{
 					if (list[j - 1] > list[j])
 						Swap(list, j - 1, j);
+					Console.WriteLine(String.Join(", ", list));
+					count++;
 				}
+				lc--;
 			}
+			Console.WriteLine(count);
 		}
 
 		/******************************************************
