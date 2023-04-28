@@ -168,7 +168,7 @@ namespace _10._Sorting
 		private static void Swap(IList<int> list, int left, int right)
 		{
 			int temp = list[left];
-			list[left] = list[right];
+			list[left] = list[right]; 
 			list[right] = temp;
 		}
 	}
